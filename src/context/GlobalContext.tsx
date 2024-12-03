@@ -40,6 +40,8 @@ interface GlobalContextType {
   setStartArray: React.Dispatch<React.SetStateAction<Task[]>>;
   doingTasksArray: Task[];
   setDoingTasksArray: React.Dispatch<React.SetStateAction<Task[]>>;
+  error: string | null;
+  setError: React.Dispatch<React.SetStateAction<string | null>>;
 }
 
 const GlobalContext = createContext<GlobalContextType | undefined>(undefined);
@@ -78,13 +80,24 @@ const GlobalProvider = ({ children }: GlobalProviderProps) => {
     },
   ]);
   const [activeUserId, setActiveUserId] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   // Fetch users from JSON file
   useEffect(() => {
     const fetchUsers = async () => {
-      const response = await fetch("/users.json"); // Adjust path as needed
-      const data = await response.json();
-      setUsers(data);
+      try {
+        const response = await fetch("/users.json"); // Adjust path as needed
+        if (!response.ok) {
+          throw new Error("Failed to fetch users.");
+        }
+        const data = await response.json();
+        setUsers(data);
+      } catch (error) {
+        setError(
+          "There was a problem loading the user data. Please try again later."
+        );
+        console.error("Error fetching users:", error);
+      }
     };
 
     fetchUsers();
@@ -101,9 +114,25 @@ const GlobalProvider = ({ children }: GlobalProviderProps) => {
         setStartArray,
         doingTasksArray,
         setDoingTasksArray,
+        error,
+        setError,
       }}
     >
       {children}
+      {error && (
+        <div
+          style={{
+            color: "red",
+            position: "fixed",
+            top: "10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            zIndex: 1000,
+          }}
+        >
+          {error}
+        </div>
+      )}
     </GlobalContext.Provider>
   );
 };
