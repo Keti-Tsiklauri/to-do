@@ -1,0 +1,218 @@
+/* Header Styles */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.mainDiv {
+  width: 90%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  display: flex;
+  font-size: 24px;
+  padding: 10px 80px 10px 5px;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.headerDiv {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+}
+
+.header p {
+  width: 25%;
+  text-align: center;
+}
+
+/* Main Content Layout */
+.mainContent {
+  display: flex;
+  flex-direction: column; /* Stack divs vertically */
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.mainContent2 {
+  margin-right: 75px;
+}
+
+/* Task Div (Tasks, Priorities, Deadlines) */
+.tasks {
+  display: flex;
+  flex-direction: column; /* Stack task items vertically */
+  align-items: stretch; /* Make sure the task items stretch to full width */
+  width: 100%; /* Full width */
+}
+
+.item {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Horizontally align elements in each item */
+  justify-content: space-between; /* Space out the text and images */
+}
+
+.item p {
+  margin: 0 10px;
+  text-align: center;
+  flex: 1;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Space between the icons */
+  cursor: pointer;
+}
+
+.icons img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.filterControls {
+  margin-top: 10px;
+}
+/* General styles for all select elements */
+.filterControls select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Add hover effect for better UX */
+.filterControls select:hover {
+  border-color: #888;
+}
+
+/* Focus styles for accessibility */
+.filterControls select:focus {
+  outline: 2px solid #007bff;
+  border-color: #007bff;
+}
+
+/* For consistent appearance across browsers */
+.filterControls select {
+  -webkit-appearance: none; /* Remove default styles in WebKit browsers */
+  -moz-appearance: none; /* Remove default styles in Firefox */
+  appearance: none; /* Standard property */
+}
+
+/* Add custom dropdown arrow (optional) */
+.filterControls select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns%3D%22http://www.w3.org/2000/svg%22 viewBox%3D%220 0 24 24%22 fill%3D%22%23000000%22%3E%3Cpath d%3D%22M7 10l5 5 5-5z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 12px;
+  padding-right: 30px; /* Space for the arrow */
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Icon container */
+.icons img {
+  cursor: pointer;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+button {
+  padding: 8px 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border-radius: 6px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+}
+button:hover {
+  border: 3px solid #007bff;
+
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+button img {
+  width: 25px;
+  height: 25px;
+}
+.toggle {
+  margin-left: 90%;
+  padding-bottom: 20px;
+}
+.darkimg {
+  filter: brightness(0.5); /* Example for dark mode effect */
+}
+.firstFilter {
+  margin-right: 30px;
+}
+.name {
+  color: black;
+  font-size: 24px;
+
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+.deadline {
+  margin-left: 35px;
+}
+.chose {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 30px;
+  color: #333;
+}
+
+.chose :first-child:hover {
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.chose :nth-child(2):hover {
+  cursor: pointer;
+  color: #007bff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+.note svg {
+  cursor: pointer;
+}
+.taskp,
+.notep {
+  color: #007bff;
+}
+.addNote {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.addNote :first-child {
+  width: 400px;
+}

@@ -1,0 +1,219 @@
+/* Global Styles for light and dark modes using CSS Variables */
+:root {
+  --light-bg: #dee4e7;
+  --dark-bg: #37474f;
+  --light-form-bg: #dddddd; /* Light mode form background */
+  --dark-form-bg: #2c3e50;
+
+  /* Text colors */
+  --text-color-light: black; /* Light mode text color */
+  --text-color-dark: #fff; /* Dark mode text color */
+  --p-color-light: #424242; /* Default <p> color in light mode */
+  --p-color-dark: #fff; /* Default <p> color in dark mode */
+
+  /* Input and error colors */
+  --input-bg-active-light: #0071bc; /* Active input background in light mode */
+  --error-color-light: #bf0000; /* Error color in light mode */
+
+  /* Button and link colors */
+  --link-color: #0071bc; /* Signup & Change Password link color */
+  --button-hover-color: #0071bc; /* Button hover color */
+}
+
+body.light {
+  --bg-color: var(--light-bg);
+  --form-bg-color: var(--light-form-bg);
+  --text-color: var(--text-color-light);
+  --p-color: var(--p-color-light);
+  --input-bg-active: var(--input-bg-active-light);
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body.dark {
+  --bg-color: var(--dark-bg);
+  --form-bg-color: var(--dark-form-bg);
+  --text-color: var(--text-color-dark);
+  --p-color: var(--p-color-dark);
+  --input-bg-active: transparent;
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p {
+  color: var(--p-color);
+}
+
+.loginform {
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.loginform .main input:focus {
+  background-color: var(--input-bg-active);
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Specific styles for password div */
+.loginform .password-container {
+  background-color: transparent; /* Ensure the container background doesn't match the input background */
+}
+
+.loginform .error {
+  color: var(--error-color);
+}
+
+.loginform input::placeholder {
+  color: var(--input-placeholder-light);
+}
+
+.loginform .signup,
+.loginform .change {
+  color: var(--link-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginform .signup:hover,
+.loginform .change:hover {
+  color: var(--button-hover-color);
+}
+
+.loginform button:hover {
+  background-color: var(--button-hover-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+/* Global Styles for light and dark modes using CSS Variables */
+:root {
+  --light-bg: #dee4e7;
+  --dark-bg: #37474f;
+  --light-form-bg: #657074;
+  --dark-form-bg: #2c3e50;
+
+  /* Text colors */
+  --text-color-light: #212121; /* Light mode text color */
+  --text-color-dark: #fff; /* Dark mode text color */
+  --p-color-light: #424242; /* Default <p> color in light mode */
+  --p-color-dark: #fff; /* Default <p> color in dark mode */
+
+  /* Input and error colors */
+  --input-bg-active-light: #0071bc; /* Active input background in light mode */
+  --input-bg-active-dark: #4e5d6a; /* Active input background in dark mode */
+  --error-color-light: #bf0000; /* Error color in light mode */
+  --error-color-dark: #bf0000; /* Error color in dark mode (same for simplicity) */
+
+  /* Button and link colors */
+  --link-color: #0071bc; /* Signup & Change Password link color */
+  --button-hover-color: #0071bc; /* Button hover color */
+}
+
+body.light {
+  --bg-color: var(--light-bg);
+  --form-bg-color: var(--light-form-bg);
+  --text-color: var(--text-color-light);
+  --p-color: var(--p-color-light);
+  --input-bg-active: var(--input-bg-active-light);
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body.dark {
+  --bg-color: var(--dark-bg);
+  --form-bg-color: var(--dark-form-bg);
+  --text-color: var(--text-color-dark);
+  --p-color: var(--p-color-dark);
+  --input-bg-active: var(
+    --input-bg-active-dark
+  ); /* Dark mode active input background */
+  --error-color: var(
+    --error-color-dark
+  ); /* Error color remains same in dark mode */
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p {
+  color: var(--p-color);
+}
+
+.loginform {
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.loginform .main input:focus {
+  background-color: var(
+    --input-bg-active
+  ); /* Apply the active background color */
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.loginform .error {
+  color: var(--error-color);
+}
+
+/* Input placeholder styles */
+.loginform input::placeholder {
+  color: var(--input-placeholder-light);
+}
+
+/* Links (Sign Up & Change Password) */
+.loginform .signup,
+.loginform .change {
+  color: var(--link-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginform .signup:hover,
+.loginform .change:hover {
+  color: var(--button-hover-color);
+}
+
+/* Button Hover */
+.loginform button:hover {
+  background-color: var(--button-hover-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Password input container */
+.password {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+/* Password input focus styles */
+.password input:focus {
+  background-color: var(--input-bg-active); /* Active background on focus */
+  border-color: var(--input-bg-active);
+}

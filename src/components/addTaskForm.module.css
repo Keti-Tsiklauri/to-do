@@ -1,0 +1,69 @@
+.addTaskForm {
+  padding: 20px;
+}
+.form {
+  border: 2px solid #2f7bc5;
+  border-radius: 6px;
+  width: 400px;
+  margin: 20px auto;
+  padding: 0px;
+}
+.addTaskForm h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.addTaskForm div {
+  margin-bottom: 15px;
+}
+
+.addTaskForm label {
+  display: block;
+  font-weight: bold;
+}
+
+.addTaskForm input,
+.addTaskForm select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensures padding is inside the element's width */
+}
+
+/* Focus effect for input and select */
+.addTaskForm input:focus,
+.addTaskForm select:focus {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on focus */
+  border: 2px solid #007bff; /* Blue color when input/select is focused */
+}
+
+/* Button styling */
+.addTaskForm button {
+  width: 100%;
+  padding: 10px;
+  color: black;
+  border: 2px solid black;
+  background-color: #2f7bc5;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addTaskForm button:hover {
+  background-color: #007bff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Close icon styling */
+.svg {
+  cursor: pointer;
+
+  right: 0px;
+  float: right;
+}
+
+.svg:hover {
+  background-color: #2f7bc5;
+  border-radius: 2px;
+}

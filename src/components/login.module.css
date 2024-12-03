@@ -1,0 +1,375 @@
+/* General Styles */
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.loginform {
+  width: 600px;
+  margin-top: 1%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 5px 30px;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease; /* Smooth transition for background change */
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main :first-child {
+  margin: 0 auto;
+  font-size: 28px;
+  text-transform: capitalize;
+}
+
+/* Form Labels */
+label {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  text-transform: capitalize;
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+
+/* Inputs */
+input {
+  font-size: 20px;
+  padding: 10px;
+  height: 30px; /* Ensures consistent height */
+  border: 1px solid black;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.email:focus {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on focus */
+  border: 2px solid #007bff; /* Blue color when input is focused */
+}
+
+/* Password Container */
+.password {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 10px; /* Horizontal padding */
+  border: 1px solid black;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.password:focus-within {
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Darker shadow on focus */
+  border: 2px solid #007bff; /* Border color change on focus */
+}
+
+.pass {
+  border: none;
+  outline: none;
+  flex: 1; /* Full-width input */
+  height: 30px;
+  font-size: 20px;
+}
+
+.password img {
+  cursor: pointer;
+  margin-left: 10px; /* Space between input and icon */
+}
+
+button:hover {
+  color: #007bff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.button {
+  width: 200px;
+}
+
+.sign :nth-child(2) {
+  padding-left: 5px;
+  color: #2f7bc5;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.sign :nth-child(2):hover,
+.changepass :nth-child(2):hover {
+  color: #007bff;
+}
+
+/* Error Messages */
+.error {
+  color: rgb(198, 26, 26);
+  margin: 5px 0 0 auto;
+}
+
+/* Text Styling */
+.p {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+}
+
+.change {
+  padding-left: 5px;
+  color: #2f7bc5;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.sign .changepass {
+  display: flex;
+  align-items: center;
+}
+.login {
+  display: flex;
+  flex-direction: column; /* Stack button and footer vertically */
+  align-items: flex-start; /* Align children to the start horizontally */
+}
+
+button {
+  height: 50px; /* Set the height of the button */
+  width: 220px;
+  font-size: 24px;
+  border-radius: 6px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.login {
+  padding-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack footer items vertically */
+  justify-content: space-between; /* Distribute space between footer items */
+  align-items: flex-start; /* Align items to the left */
+  height: 40px; /* Same height as the button */
+  width: 100%; /* Ensure footer takes full width of the parent */
+  margin-left: auto; /* Align the footer to the right */
+}
+
+.footer > div {
+  display: flex;
+  align-items: center; /* Center the content vertically inside the div */
+  gap: 5px;
+}
+
+.signup,
+.change {
+  cursor: pointer;
+  color: #2f7bc5;
+  text-decoration: underline;
+}
+
+.signup:hover,
+.change:hover {
+  color: #007bff;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+.sign,
+.changepass {
+  height: 20px;
+}
+body.light {
+  --bg-color: var(--light-bg);
+  --form-bg-color: var(--light-form-bg);
+  --text-color: var(--text-color-light);
+  --p-color: var(--p-color-light);
+  --input-bg-active: var(--input-bg-active-light);
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body.dark {
+  --bg-color: var(--dark-bg);
+  --form-bg-color: var(--dark-form-bg);
+  --text-color: var(--text-color-dark);
+  --p-color: var(--p-color-dark);
+  --input-bg-active: transparent;
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p {
+  color: var(--p-color);
+}
+
+.loginform {
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.loginform .main input:focus {
+  background-color: var(--input-bg-active);
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Specific styles for password div */
+.loginform .password-container {
+  background-color: transparent; /* Ensure the container background doesn't match the input background */
+}
+
+.loginform .error {
+  color: var(--error-color);
+}
+
+.loginform input::placeholder {
+  color: var(--input-placeholder-light);
+}
+
+.loginform .signup,
+.loginform .change {
+  color: var(--link-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginform .signup:hover,
+.loginform .change:hover {
+  color: var(--button-hover-color);
+}
+
+.loginform button:hover {
+  background-color: var(--button-hover-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+/* Global Styles for light and dark modes using CSS Variables */
+:root {
+  --light-bg: #dee4e7;
+  --dark-bg: #37474f;
+  --light-form-bg: #657074;
+  --dark-form-bg: #2c3e50;
+
+  /* Text colors */
+  --text-color-light: #212121; /* Light mode text color */
+  --text-color-dark: #fff; /* Dark mode text color */
+  --p-color-light: #424242; /* Default <p> color in light mode */
+  --p-color-dark: #fff; /* Default <p> color in dark mode */
+
+  /* Input and error colors */
+  --input-bg-active-light: #0071bc; /* Active input background in light mode */
+  --input-bg-active-dark: #4e5d6a; /* Active input background in dark mode */
+  --error-color-light: #bf0000; /* Error color in light mode */
+  --error-color-dark: #bf0000; /* Error color in dark mode (same for simplicity) */
+
+  /* Button and link colors */
+  --link-color: #0071bc; /* Signup & Change Password link color */
+  --button-hover-color: #0071bc; /* Button hover color */
+}
+
+body.light {
+  --bg-color: var(--light-bg);
+  --form-bg-color: var(--light-form-bg);
+  --text-color: var(--text-color-light);
+  --p-color: var(--p-color-light);
+  --input-bg-active: var(--input-bg-active-light);
+  --error-color: var(--error-color-light);
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body.dark {
+  --bg-color: var(--dark-bg);
+  --form-bg-color: var(--dark-form-bg);
+  --text-color: var(--text-color-dark);
+  --p-color: var(--p-color-dark);
+  --input-bg-active: var(
+    --input-bg-active-dark
+  ); /* Dark mode active input background */
+  --error-color: var(
+    --error-color-dark
+  ); /* Error color remains same in dark mode */
+  --link-color: var(--link-color);
+  --button-hover-color: var(--button-hover-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+p {
+  color: var(--p-color);
+}
+
+.loginform {
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.loginform .main input:focus {
+  background-color: var(
+    --input-bg-active
+  ); /* Apply the active background color */
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.loginform .error {
+  color: var(--error-color);
+}
+
+/* Input placeholder styles */
+.loginform input::placeholder {
+  color: var(--input-placeholder-light);
+}
+
+/* Links (Sign Up & Change Password) */
+.loginform .signup,
+.loginform .change {
+  color: var(--link-color);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.loginform .signup:hover,
+.loginform .change:hover {
+  color: var(--button-hover-color);
+}
+
+/* Button Hover */
+.loginform button:hover {
+  background-color: var(--button-hover-color);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+/* Password input container */
+.password {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+/* Password input focus styles */
+.password input:focus {
+  background-color: var(--input-bg-active); /* Active background on focus */
+  border-color: var(--input-bg-active);
+}

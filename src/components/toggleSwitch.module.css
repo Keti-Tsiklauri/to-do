@@ -1,0 +1,63 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin: 0 10px; /* Combined margin for consistency */
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: -3px;
+  bottom: 0;
+  background-color: #0071bc; /* Color when not checked */
+  border-radius: 34px; /* Rounded corners for the switch track */
+  transition: background-color 0.4s; /* Smooth transition for color */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px; /* Adjusted for better centering */
+  right: 8px;
+  bottom: 5px; /* Adjusted for better centering */
+  background-color: white;
+  border-radius: 50%; /* Round shape for the switch knob */
+  transition: transform 0.4s; /* Smooth transition for knob movement */
+}
+
+input:checked + .slider {
+  background-color: #0071bc; /* Color when checked */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #0071bc; /* Adjust focus box-shadow color */
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px); /* Adjust knob movement distance */
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; /* Rounded switch track */
+}
+
+.slider.round:before {
+  border-radius: 50%; /* Rounded switch knob */
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center items horizontally if needed */
+}
+
+.toggle {
+  color: #0071bc; /* Color for toggle related text/icons */
+}
